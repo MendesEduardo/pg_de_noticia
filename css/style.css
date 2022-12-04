@@ -1,0 +1,252 @@
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Inter', sem serifa;
+}
+
+body {
+    background: rgb(235, 235, 235);
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    max-width: 1000px;
+    margin: 2em auto;
+}
+
+
+/* TOPNAV */
+header img {
+    float: left;
+}
+
+nav {
+    display: flex;
+    justify-content: end;
+}
+
+.topnav {
+    overflow: hidden;
+}
+  
+.topnav a {
+    float: left;
+    color: #000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+  
+.topnav a:hover {
+    color: red;
+}
+
+.topnav a.active {
+    color: red;
+}
+  
+.topnav .icon {
+    display: none;
+    right: 2em;
+    top: 1em;
+}
+  
+@media(max-width: 600px) {
+    #container {
+        margin: 1em auto;
+    }
+    nav {
+        display: block;
+        margin-top: 1em;
+    }
+    .topnav img {
+        display: block;
+        margin-left: 1em;
+    }
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+    .topnav a.icon {
+      float: right;
+      display: block;
+      margin-top: -1em;
+    }
+    .topnav.responsive {
+        position: relative;
+    }
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0em;
+      top: 1em;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+}
+
+
+/* ROOOWWWOWO */
+.row {  
+    display: flex;
+}
+
+/* MAIN */
+  
+.main {
+    flex: 65%;
+}
+
+.main img {
+    width: 95%;
+    height: 50%;
+}
+
+.main .x {
+    display: flex;
+    gap: 3em;
+
+}
+
+.main .x h1{
+    margin:0.3em 0;
+    font-size: 2.3em;
+    flex: 100%;
+}
+
+.main .x p{
+    margin: 1em 0;
+    padding-right: 1.5em;
+    flex: 150%;
+}
+
+.main .x button{
+    width: 200px;
+    height: 40px;
+    display: block;
+    margin-top: 2em;
+    border: none;
+    background: red;
+}
+
+.main .x button a {
+    color: #FFF;
+    text-transform: uppercase;
+}
+
+.main .x button:hover {
+    background: #000;
+    cursor: pointer;
+}
+
+@media(max-width: 800px) {
+    .row {
+        flex-direction: column;
+        margin: 2em;
+    }
+    .main img {
+        width: 100%;
+        height: 300px;
+    }
+    .main .x{
+       flex-direction: column;
+    }
+    .main .x p{
+        margin-top: -2.5em;
+    }
+    .main .x button{
+        margin-bottom: 3em;
+    }
+}
+
+/* SIDE */
+.side {
+    flex: 30%;
+    padding:0 1em;
+    background-color: #202020;
+    height: 50%;
+}
+
+.side hr {
+    color: gray;
+}
+
+.side h2 {
+    color: rgb(255, 183, 0);
+}
+
+.side h4 {
+    color: #FFF;
+}
+
+.side p {
+    color: gray;
+    margin-top: -1em;
+}
+
+.side h4:hover {
+    color: rgb(255, 183, 0);
+    cursor: pointer;
+}
+
+/* CARDS */
+.card {
+    display: flex;
+    float: left;
+    width: 33.33%;
+    margin-top: -3em;
+}
+
+.card img {
+    width: 100px;
+    height: 150px;
+}
+
+.card_texto {
+    padding: 1em;
+    margin-top: -1em;
+    flex: 25%;
+}
+
+.card_texto h1 {
+    color: gray;
+}
+
+.card_texto h4 {
+    margin-top: -0.5em;
+}
+
+.card_texto p {
+    margin-top: -0.7em;
+    color: gray;
+}
+
+@media(max-width: 800px) {
+    .card {
+        display: flex;
+        width: 100%;
+        margin: 0;
+    }
+    .card_texto {
+        padding: 1em;
+    }
+    .card img {
+        width: 150px;
+        height: 150px;
+        margin-top: 0.5em;
+    }
+    .card_texto h1 {
+        color: gray;
+        margin-top: 0em;
+    }
+    .card_texto h4 {
+        margin-top: -1em;
+    }
+    .card_texto p {
+        margin-top: -1em;
+        color: gray;
+    }
+}
